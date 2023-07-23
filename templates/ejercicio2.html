@@ -1,0 +1,38 @@
+{%extends "base.html"%}
+
+
+{%block title%} 
+Ej1
+{%endblock%}
+
+
+{%block header%} 
+2. Leer un número entero y mostrar todos los pares comprendidos entre 1 y el número leído.
+
+<form action = "#" method="post">
+    <input type="text" name="numinput">
+    <p>
+        <input type="submit">   
+    </p>
+</form>
+{%endblock%}
+
+
+{%block paragraph%} 
+
+{% if numbers %}
+    
+        {% for num in numbers %}
+            {% if num % 2 == 0 %}
+                <li>{{ num }}</li>
+            {% endif %}
+        {% endfor %}
+    
+{% endif %}
+
+
+{%endblock%}
+
+
+
+

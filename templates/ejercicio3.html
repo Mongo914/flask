@@ -1,0 +1,35 @@
+{%extends "base.html"%}
+
+
+{%block title%} 
+Ej1
+{%endblock%}
+
+
+{%block header%} 
+3. Leer un número entero y mostrar todos los divisores exactos del número comprendidos entre 1 y el número leído. 
+<form action = "#" method="post">
+    <input type="text" name="numinput">
+    <p>
+        <input type="submit">   
+    </p>
+</form>
+{%endblock%}
+
+
+{%block paragraph%} 
+
+{% if numbers %}
+    
+        {% for num in numbers %}
+            <li>{{ num }}</li>
+        {% endfor %}
+    
+{% endif %}
+
+
+{%endblock%}
+
+
+
+
